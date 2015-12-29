@@ -349,6 +349,9 @@ public class StreetGraph {
 		}
 	}
 
+	/**
+	 * Remove all dead-end roads from the street graph.
+	 */
 	public void removeFilamentRoads()
 	{
 		Road currentRoad;

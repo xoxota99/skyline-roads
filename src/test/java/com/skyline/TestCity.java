@@ -52,6 +52,9 @@ public class TestCity extends City {
 		 * such.
 		 */
 		map.removeFilamentRoads();
+
+		logger.info("===============");
+		logger.info(map.toString());
 	}
 
 	protected void createZones() {

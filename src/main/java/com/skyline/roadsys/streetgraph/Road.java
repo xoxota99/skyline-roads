@@ -68,7 +68,7 @@ public class Road {
 	}
 
 	public String toString() {
-		return "Road(" + (this) + ", " + getPath().toString() + ")";
+		return "Road(" + getPath().toString() + ")";
 	}
 
 	/**

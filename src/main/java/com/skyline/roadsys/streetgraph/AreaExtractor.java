@@ -646,14 +646,14 @@ public class AreaExtractor {
 		List<Intersection> retval = adjacentNodes.get(node);
 		
 		//Integrity check.
-		if(retval==null || retval.size()==0){
-			//no neighbors?
-			if(node.getRoads().size()>0){
-				throw new IllegalStateException("Node " + node.toString() + " has "+node.getRoads().size() + " roads, but AdjacentNodes claims zero.");
-			}
-		} else if (retval.size()!=node.getRoads().size()){
-			throw new IllegalStateException("Node " + node.toString() + " has "+node.getRoads().size() + " roads, but AdjacentNodes claims " + retval.size()+".");
-		}
+//		if(retval==null || retval.size()==0){
+//			//no neighbors?
+//			if(node.getRoads().size()>0){
+//				throw new IllegalStateException("Node " + node.toString() + " has "+node.getRoads().size() + " roads, but AdjacentNodes claims zero.");
+//			}
+//		} else if (retval.size()!=node.getRoads().size()){
+//			throw new IllegalStateException("Node " + node.toString() + " has "+node.getRoads().size() + " roads, but AdjacentNodes claims " + retval.size()+".");
+//		}
 		// FIXME exception when not in graph
 		return retval == null ? new ArrayList<Intersection>() : retval;
 	}
