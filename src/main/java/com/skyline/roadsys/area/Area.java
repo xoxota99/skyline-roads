@@ -1,6 +1,9 @@
 package com.skyline.roadsys.area;
 
 import com.skyline.roadsys.geometry.*;
+/*
+ * Shamelessly stolen from https://github.com/pazdera/libcity
+ */
 
 public abstract class Area {
 	protected Polygon constraints;
