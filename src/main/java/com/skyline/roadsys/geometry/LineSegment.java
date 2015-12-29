@@ -180,7 +180,7 @@ public class LineSegment extends Line {
 		// BYREF:
 		// intersection
 
-		// NOTE: intersection can be null. (See RoadLSystem.localraints)
+		// NOTE: intersection can be null. (See RoadLSystem.localConstraints)
 
 		// SOURCE: http://paulbourke.net/geometry/lineline2d/
 		double denominator = ((another.end().y - another.begining().y) * (end().x - begining().x)) -
@@ -224,22 +224,15 @@ public class LineSegment extends Line {
 
 				if (!this.hasPoint2D(another.begining()) &&
 						!this.hasPoint2D(another.end()))
-				/* Line segments are subsequent. */
+				/* Line segments are subsequent, and do not cross. */
 				{
 
 					return IntersectionType.ORTHOGONAL;
 				}
 
 				if (begining().equals(another.begining()) ||
-						begining().equals(another.end()))
-				/* Line segments touch just in one point. */
-				{
-
-					intersection.set(begining());
-					return IntersectionType.INTERSECTING;
-				}
-
-				if (end().equals(another.end()) ||
+						begining().equals(another.end()) ||
+						end().equals(another.end()) ||
 						end().equals(another.begining()))
 				/* Line segments touch just in one point. */
 				{

@@ -109,7 +109,7 @@ public class StreetGraph {
 						intersectionType == IntersectionType.CONTAINING ||
 						intersectionType == IntersectionType.OVERLAPPING)
 				{
-					logger.error("Attempted to add a road that is CONTAINED, IDENTICAL, CONTAINING, or OVERLAPPING another road.");
+					logger.error("Attempted to add a road that is "+intersectionType.toString() + " with another road.");
 					return;
 					// throw new
 					// IllegalStateException("Attempted to add a road that is CONTAINED, IDENTICAL, CONTAINING, or OVERLAPPING another road.");

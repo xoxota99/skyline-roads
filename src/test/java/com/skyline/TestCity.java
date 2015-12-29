@@ -51,7 +51,7 @@ public class TestCity extends City {
 		 * This is important to avoid filament roads to go under buildings and
 		 * such.
 		 */
-		map.removeFilamentRoads();
+		//map.removeFilamentRoads();
 
 		logger.info("===============");
 		logger.info(map.toString());

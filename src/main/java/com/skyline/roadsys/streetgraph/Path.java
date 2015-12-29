@@ -151,4 +151,8 @@ public class Path {
 	public double distance(Point point) {
 		return representation.distance(point);
 	}
+	public void set(Path path) {
+		this.representation.first.set(path.representation.first);
+		this.representation.second.set(path.representation.second);
+	}
 }
