@@ -136,8 +136,8 @@ public class Ray {
 		double x2 = origin().x + direction().x;
 		double y2 = origin().y + direction().y;
 
-		double x3 = line.begining().x;
-		double y3 = line.begining().y;
+		double x3 = line.beginning().x;
+		double y3 = line.beginning().y;
 		double x4 = line.end().x;
 		double y4 = line.end().y;
 
@@ -179,7 +179,7 @@ public class Ray {
 	{
 		double r, s, d;
 
-		double x1 = origin().x, y1 = origin().y, x2 = origin().x + direction().x, y2 = origin().y + direction().y, x3 = another.begining().x, y3 = another.begining().y, x4 = another.end().x, y4 = another.end().y;
+		double x1 = origin().x, y1 = origin().y, x2 = origin().x + direction().x, y2 = origin().y + direction().y, x3 = another.beginning().x, y3 = another.beginning().y, x4 = another.end().x, y4 = another.end().y;
 
 		if (Math.abs((y2 - y1) / (x2 - x1) - (y4 - y3) / (x4 - x3)) > Units.COORDINATES_EPSILON)
 		/* Make sure the lines aren't parallel */
