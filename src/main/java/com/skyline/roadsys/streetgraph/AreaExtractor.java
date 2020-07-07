@@ -154,7 +154,7 @@ public class AreaExtractor {
 			Point b = new Point(previousNormal);
 			b.scale(distances.get(previous));
 			b.add(oldArea.vertex(current));
-			previousEdge.setBegining(b);
+			previousEdge.setBeginning(b);
 
 			Point e = new Point(previousNormal);
 			e.scale(distances.get(previous));
@@ -164,7 +164,7 @@ public class AreaExtractor {
 			b = new Point(currentNormal);
 			b.scale(distances.get(current));
 			b.add(oldArea.vertex(current));
-			currentEdge.setBegining(b);
+			currentEdge.setBeginning(b);
 
 			e = new Point(currentNormal);
 			e.scale(distances.get(current));
