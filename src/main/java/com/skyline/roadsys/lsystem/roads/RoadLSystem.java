@@ -108,10 +108,10 @@ public class RoadLSystem extends GraphicLSystem {
 	}
 
 	protected boolean isPathInsideAreaConstraints(Path proposedPath) {
-		boolean beginingIsInside = areaConstraints.encloses2D(proposedPath.begining()),
+		boolean beginningIsInside = areaConstraints.encloses2D(proposedPath.beginning()),
 				endIsInside = areaConstraints.encloses2D(proposedPath.end());
 
-		if (!beginingIsInside && !endIsInside) {
+		if (!beginningIsInside && !endIsInside) {
 			return false;
 		}
 
@@ -121,10 +121,10 @@ public class RoadLSystem extends GraphicLSystem {
 		boolean touching = false;
 
 		for (int number = 0; number < vertices; number++) {
-			edge.setBegining(areaConstraints.vertex(number));
+			edge.setBeginning(areaConstraints.vertex(number));
 			edge.setEnd(areaConstraints.vertex((number + 1) % vertices));
 
-			if (edge.hasPoint2D(proposedPath.begining()) || edge.hasPoint2D(proposedPath.end())) {
+			if (edge.hasPoint2D(proposedPath.beginning()) || edge.hasPoint2D(proposedPath.end())) {
 				touching = true;
 				continue;
 			}
@@ -133,8 +133,8 @@ public class RoadLSystem extends GraphicLSystem {
 																										// intersection
 			{
 
-				if (!areaConstraints.encloses2D(proposedPath.begining())) {
-					proposedPath.setBegining(intersection);
+				if (!areaConstraints.encloses2D(proposedPath.beginning())) {
+					proposedPath.setBeginning(intersection);
 				} else {
 					proposedPath.setEnd(intersection);
 				}

@@ -104,7 +104,7 @@ public class Block extends Area {
 			longestEdge = region.getLongestEdgeWithRoadAccess();
 			if (longestEdge != null)
 			{
-				edgeLine.set(new Point(longestEdge.begining), new Point(longestEdge.next.begining));
+				edgeLine.set(new Point(longestEdge.beginning), new Point(longestEdge.next.beginning));
 				logger.debug("Longest Road edge: " + edgeLine.length());
 				if (edgeLine.length() <= LOT_WIDTH) /*
 													 * No road edge requires
@@ -115,7 +115,7 @@ public class Block extends Area {
 					longestEdge = region.getLongestEdgeWithoutRoadAccess();
 					if (longestEdge != null)
 					{
-						edgeLine.set(longestEdge.begining, longestEdge.next.begining);
+						edgeLine.set(longestEdge.beginning, longestEdge.next.beginning);
 						logger.debug("Longest NONRoad edge: " + edgeLine.length());
 						if (edgeLine.length() <= LOT_DEPTH) /*
 															 * No non-road edge

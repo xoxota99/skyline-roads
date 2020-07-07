@@ -12,10 +12,10 @@ public class TestLine {
 	{
 		Line line = new Line();
 
-		line.setBegining(new Point(0, 0, 0));
+		line.setBeginning(new Point(0, 0, 0));
 		line.setEnd(new Point(0, 0, 0));
 
-		Assert.assertTrue(new Point(0, 0, 0).equals(line.begining()));
+		Assert.assertTrue(new Point(0, 0, 0).equals(line.beginning()));
 		Assert.assertTrue(new Point(0, 0, 0).equals(line.end()));
 	}
 

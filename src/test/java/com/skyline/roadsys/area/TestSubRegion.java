@@ -17,9 +17,9 @@ public class TestSubRegion {
 		SubRegion r = new SubRegion(p);
 		SubRegion.Edge e = r.getFirstEdge();
 
-		Assert.assertTrue(new Point(0, 0).equals(e.begining));
-		Assert.assertTrue(new Point(10, 0).equals(e.next.begining));
-		Assert.assertTrue(new Point(0, 10).equals(e.previous.begining));
+		Assert.assertTrue(new Point(0, 0).equals(e.beginning));
+		Assert.assertTrue(new Point(10, 0).equals(e.next.beginning));
+		Assert.assertTrue(new Point(0, 10).equals(e.previous.beginning));
 	}
 
 	@Test
@@ -34,11 +34,11 @@ public class TestSubRegion {
 		current = r.insert(current, new Point(0, 10));
 
 		e = r.getFirstEdge();
-		Assert.assertTrue(new Point(0, 0).equals(e.begining));
-		Assert.assertTrue(new Point(10, 0).equals(e.next.begining));
-		Assert.assertTrue(new Point(0, 10).equals(e.previous.begining));
-		Assert.assertTrue(new Point(0, 0).equals(e.previous.next.begining));
-		Assert.assertTrue(new Point(10, 10).equals(e.previous.previous.begining));
+		Assert.assertTrue(new Point(0, 0).equals(e.beginning));
+		Assert.assertTrue(new Point(10, 0).equals(e.next.beginning));
+		Assert.assertTrue(new Point(0, 10).equals(e.previous.beginning));
+		Assert.assertTrue(new Point(0, 0).equals(e.previous.next.beginning));
+		Assert.assertTrue(new Point(10, 10).equals(e.previous.previous.beginning));
 	}
 
 	@Test
@@ -51,8 +51,8 @@ public class TestSubRegion {
 		current = r.insert(current, new Point(10, 10));
 		current.hasRoadAccess = false;
 
-		Assert.assertTrue(new Point(10, 0).equals(r.getLongestEdgeWithRoadAccess().begining));
-		Assert.assertTrue(new Point(10, 10).equals(r.getLongestEdgeWithoutRoadAccess().begining));
+		Assert.assertTrue(new Point(10, 0).equals(r.getLongestEdgeWithRoadAccess().beginning));
+		Assert.assertTrue(new Point(10, 10).equals(r.getLongestEdgeWithoutRoadAccess().beginning));
 
 		Assert.assertTrue(r.hasRoadAccess());
 	}
@@ -85,6 +85,6 @@ public class TestSubRegion {
 		current = r.insert(current, new Point(0, 10));
 
 		SubRegion s = new SubRegion(r);
-		Assert.assertTrue(s.getFirstEdge().begining.equals(r.getFirstEdge().begining));
+		Assert.assertTrue(s.getFirstEdge().beginning.equals(r.getFirstEdge().beginning));
 	}
 }

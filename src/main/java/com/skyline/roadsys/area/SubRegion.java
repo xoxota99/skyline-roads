@@ -16,7 +16,7 @@ public class SubRegion {
 
 	public static class Edge implements Comparable<Edge>
 	{
-		Point begining;
+		Point beginning;
 		double s;
 		boolean hasRoadAccess;
 		Edge previous;
@@ -24,7 +24,7 @@ public class SubRegion {
 
 		@Override
 		public int compareTo(Edge other) {
-			return begining.compareTo(((Edge) other).begining);
+			return beginning.compareTo(((Edge) other).beginning);
 		}
 	}
 

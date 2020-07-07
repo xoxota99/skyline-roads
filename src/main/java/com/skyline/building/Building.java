@@ -387,7 +387,7 @@ public abstract class Building extends BuildingLSystem {
 	}
 
 	private void renderObliqueShape(Polygon bottomBase, Polygon topBase,
-			Point beginingHeight, Point endHeight)
+			Point beginningHeight, Point endHeight)
 	{
 		assert (bottomBase.numberOfVertices() == topBase.numberOfVertices());
 		assert (bottomBase.isClosed());

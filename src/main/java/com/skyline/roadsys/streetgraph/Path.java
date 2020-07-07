@@ -37,8 +37,8 @@ public class Path {
 		representation = new LineSegment(source.representation);
 	}
 
-	public Point begining() {
-		return representation.begining();
+	public Point beginning() {
+		return representation.beginning();
 	}
 
 	public Point end() {

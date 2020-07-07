@@ -30,24 +30,24 @@ public class Line {
 
 	/** < Own copyructor is neccessary */
 	public Line(Line source) {
-		this.first = new Point(source.begining());
+		this.first = new Point(source.beginning());
 		this.second = new Point(source.end());
 	}
 
-	public void set(Point begining, Point end) {
-		setBegining(begining);
+	public void set(Point beginning, Point end) {
+		setBeginning(beginning);
 		setEnd(end);
 	}
 
-	public void setBegining(Point begining) {
-		this.first = begining;
+	public void setBeginning(Point beginning) {
+		this.first = beginning;
 	}
 
 	public void setEnd(Point end) {
 		this.second = end;
 	}
 
-	public Point begining() {
+	public Point beginning() {
 		return this.first;
 	}
 
@@ -65,9 +65,9 @@ public class Line {
 	public IntersectionType intersection2D(Line another, Point intersection)
 	// SOURCE: http://paulbourke.net/geometry/lineline2d/
 	{
-		double denominator = ((another.end().y - another.begining().y) * (end().x - begining().x)) -
-				((another.end().x - another.begining().x) * (end().y - begining().y)), firstNumerator = ((another.end().x - another.begining().x) * (begining().y - another.begining().y)) -
-				((another.end().y - another.begining().y) * (begining().x - another.begining().x));
+		double denominator = ((another.end().y - another.beginning().y) * (end().x - beginning().x)) -
+				((another.end().x - another.beginning().x) * (end().y - beginning().y)), firstNumerator = ((another.end().x - another.beginning().x) * (beginning().y - another.beginning().y)) -
+				((another.end().y - another.beginning().y) * (beginning().x - another.beginning().x));
 
 		if (Math.abs(denominator) <= 0.001) // WARNING: should be
 											// libcity::EPSILON
@@ -79,8 +79,8 @@ public class Line {
 
 		double ua = firstNumerator / denominator;
 
-		intersection.x = (begining().x + ua * (end().x - begining().x));
-		intersection.y = (begining().y + ua * (end().y - begining().y));
+		intersection.x = (beginning().x + ua * (end().x - beginning().x));
+		intersection.y = (beginning().y + ua * (end().y - beginning().y));
 
 		return IntersectionType.INTERSECTING;
 	}
