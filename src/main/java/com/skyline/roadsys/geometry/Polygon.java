@@ -177,7 +177,7 @@ public class Polygon {
 			//Does the normal of the edge we're testing intersect with this edge?
 			if (i != edgeNumber && testRay.intersection2D(currentEdge, intersection) == IntersectionType.INTERSECTING)
 			{
-				if (intersection.equals(currentEdge.begining()) || intersection.equals(currentEdge.end()))
+				if (intersection.equals(currentEdge.beginning()) || intersection.equals(currentEdge.end()))
 				{
 					vertexHits++;
 				}
@@ -310,7 +310,7 @@ public class Polygon {
 
 			Point v = new Point(oldArea.vertex(previous));
 			v.add(fn);
-			first.setBegining(v);
+			first.setBeginning(v);
 
 			v = new Point(oldArea.vertex(current));
 			v.add(fn);
