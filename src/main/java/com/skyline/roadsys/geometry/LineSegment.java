@@ -84,7 +84,7 @@ public class LineSegment extends Line {
 	public IntersectionType intersection2D(Line another, Point intersection) {
 		double r, d; // r, s, d
 
-		double x1 = begining().x, y1 = begining().y, x2 = end().x, y2 = end().y, x3 = another.begining().x, y3 = another.begining().y, x4 = another.end().x, y4 = another.end().y;
+		double x1 = beginning().x, y1 = beginning().y, x2 = end().x, y2 = end().y, x3 = another.beginning().x, y3 = another.beginning().y, x4 = another.end().x, y4 = another.end().y;
 
 		// Make sure the lines aren't parallel
 		if (Math.abs((y2 - y1) / (x2 - x1) - (y4 - y3) / (x4 - x3)) > Units.EPSILON)
