@@ -12,7 +12,7 @@ public class TestLineSegment {
 	{
 		LineSegment line = new LineSegment();
 
-		line.setBegining(new Point(0, 0, 0));
+		line.setBeginning(new Point(0, 0, 0));
 		line.setEnd(new Point(0, 0, 0));
 	}
 
