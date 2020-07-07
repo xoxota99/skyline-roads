@@ -53,9 +53,9 @@ public class Road {
 		this.roadType = roadType;
 	}
 
-	public void setFrom(Intersection begining) {
-		this.from = begining;
-		path.setBegining(begining.position());
+	public void setFrom(Intersection beginning) {
+		this.from = beginning;
+		path.setBeginning(beginning.position());
 	}
 
 	public void setTo(Intersection end) {
