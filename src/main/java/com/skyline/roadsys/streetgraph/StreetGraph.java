@@ -319,7 +319,7 @@ public class StreetGraph {
 				if (intersectionType == IntersectionType.INTERSECTING)
 				{
 
-					if (intersection.equals(currentRoad.getPath().begining()) ||
+					if (intersection.equals(currentRoad.getPath().beginning()) ||
 							intersection.equals(currentRoad.getPath().end()))
 					/* New road is just touching some other one */
 					{
@@ -355,16 +355,16 @@ public class StreetGraph {
 	public void removeFilamentRoads()
 	{
 		Road currentRoad;
-		Intersection roadBegining;
+		Intersection roadBeginning;
 		Intersection roadEnd;
 		List<Road> filaments = new ArrayList<Road>();
 
 		for (Road road : roads)
 		{
 			currentRoad = road;
-			roadBegining = currentRoad.getFrom();
+			roadBeginning = currentRoad.getFrom();
 			roadEnd = currentRoad.getTo();
-			if (roadBegining.numberOfWays() <= 1 ||
+			if (roadBeginning.numberOfWays() <= 1 ||
 					roadEnd.numberOfWays() <= 1)
 			{
 				filaments.add(currentRoad);
