@@ -16,19 +16,19 @@ public class TestPath {
 
 		correct = new Vector3d(-1, -1, 0);
 		correct.normalize();
-		Assert.assertEquals(correct, path.beginingDirectionVector());
+		Assert.assertEquals(correct, path.beginningDirectionVector());
 
 		correct = new Vector3d(1, 1, 0);
 		correct.normalize();
 		Assert.assertEquals(correct, path.endDirectionVector());
 
-		path.setBegining(new Point(10, 10));
+		path.setBeginning(new Point(10, 10));
 		path.setEnd(new Point(-10, -10));
 
 		correct = new Vector3d(1, 1, 0);
 		correct.normalize();
 
-		Assert.assertEquals(correct, path.beginingDirectionVector());
+		Assert.assertEquals(correct, path.beginningDirectionVector());
 
 		correct = new Vector3d(-1, -1, 0);
 		correct.normalize();
